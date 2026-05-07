@@ -1,194 +1,1043 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website Suspended · Account Reconciliation</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hill Land General Trading Co. Ltd | Reliable Trading & Logistics in South Sudan</title>
+    <meta name="description" content="Hill Land General Trading Co. Ltd provides transportation, logistics, vehicle rental, cleaning, supply, and general trading services across South Sudan and East Africa. Get in touch today!">
+    <meta name="keywords" content="South Sudan trading, logistics Juba, vehicle rental Juba, cleaning services South Sudan, cross-border logistics, Hill Land General Trading">
+    <meta name="author" content="Hill Land General Trading Co. Ltd">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://hillland.com.ss/">
 
-    body {
-      background: linear-gradient(145deg, #1f2e3b 0%, #13212b 100%);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Segoe UI', 'Inter', system-ui, -apple-system, sans-serif;
-      padding: 1.5rem;
-    }
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    .notice-card {
-      max-width: 600px;
-      width: 100%;
-      background: rgba(255, 255, 255, 0.96);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      border-radius: 2.5rem;
-      padding: 2.8rem 2.2rem;
-      box-shadow: 0 30px 45px -12px rgba(0, 0, 0, 0.4), 0 2px 10px rgba(0,0,0,0.1);
-      text-align: center;
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      transition: all 0.2s;
-    }
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #071321;
+            --primary-light: #0B1D35;
+            --accent: #C9A851;
+            --accent-hover: #B8943A;
+            --accent-light: rgba(201, 168, 81, 0.15);
+            --accent-glow: rgba(201, 168, 81, 0.4);
+            --white: #ffffff;
+            --gray-50: #f8f9fa;
+            --gray-100: #f0f1f3;
+            --gray-200: #e2e4e8;
+            --gray-300: #c5c8ce;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+            --glass-bg: rgba(255,255,255,0.06);
+            --glass-border: rgba(255,255,255,0.15);
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+            --shadow-md: 0 4px 20px rgba(0,0,0,0.12);
+            --shadow-lg: 0 10px 40px rgba(0,0,0,0.15);
+            --shadow-xl: 0 20px 60px rgba(0,0,0,0.25);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--gray-800);
+            background: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--gray-100); }
+        ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--accent-hover); }
 
-    .icon-circle {
-      background: #e9f0f5;
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 1.5rem;
-      color: #2b5f7a;
-      font-size: 2.6rem;
-      box-shadow: inset 0 0 0 2px rgba(255,255,255,0.8), 0 8px 16px -6px rgba(0,30,40,0.2);
-    }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; font-weight: 700; line-height: 1.2; }
+        h1 { font-size: clamp(2.8rem, 5vw, 4.2rem); }
+        h2 { font-size: clamp(2rem, 4vw, 2.8rem); }
+        h3 { font-size: clamp(1.3rem, 2.5vw, 1.6rem); }
+        a { text-decoration: none; color: inherit; transition: var(--transition); }
+        img { max-width: 100%; display: block; }
+        ul { list-style: none; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
 
-    h1 {
-      font-size: 2.1rem;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-      color: #1a3c4e;
-      margin-bottom: 0.4rem;
-    }
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+            padding: 14px 32px; border-radius: 50px; font-weight: 600; font-size: 0.95rem;
+            border: none; cursor: pointer; transition: var(--transition); white-space: nowrap;
+            font-family: 'Inter', sans-serif; letter-spacing: 0.02em;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+            color: #0a0a0a; box-shadow: 0 4px 20px rgba(201,168,81,0.5);
+        }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(201,168,81,0.6); }
+        .btn-outline {
+            background: transparent; color: var(--white);
+            border: 2px solid rgba(255,255,255,0.5); backdrop-filter: blur(4px);
+        }
+        .btn-outline:hover { background: var(--white); color: var(--primary); border-color: var(--white); }
+        .btn-dark { background: var(--primary); color: var(--white); border: 2px solid var(--primary); }
+        .btn-dark:hover { background: var(--primary-light); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
+        .btn-accent-outline { background: transparent; color: var(--accent); border: 2px solid var(--accent); }
+        .btn-accent-outline:hover { background: var(--accent); color: var(--primary); }
+        .btn-sm { padding: 10px 24px; font-size: 0.85rem; }
+        .btn-lg { padding: 18px 40px; font-size: 1.05rem; }
 
-    .suspended-badge {
-      display: inline-block;
-      background: #f5e1d3;
-      color: #9b4e1d;
-      font-weight: 600;
-      font-size: 0.85rem;
-      padding: 0.3rem 1.4rem;
-      border-radius: 40px;
-      margin-bottom: 1.8rem;
-      border: 1px solid #eccfbe;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
+        .section { padding: 120px 0; }
+        .section-dark { background: var(--primary); color: var(--white); }
+        .section-light { background: var(--gray-50); }
 
-    .message-panel {
-      background: #f6fcff;
-      padding: 1.8rem 1.2rem;
-      border-radius: 28px;
-      margin: 0.5rem 0 1.8rem;
-      border: 1px solid #cbdbe9;
-      box-shadow: inset 0 2px 5px rgba(0,0,0,0.02);
-    }
+        .section-header {
+            text-align: center; max-width: 700px; margin: 0 auto 70px;
+        }
+        .section-header h2 { margin-bottom: 16px; color: var(--primary); }
+        .section-header h2::after {
+            content: ''; display: block; width: 60px; height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+            margin: 16px auto 0; border-radius: 2px;
+        }
+        .section-header p { font-size: 1.1rem; color: var(--gray-500); margin-top: 12px; }
+        .section-dark .section-header h2 { color: var(--white); }
+        .section-dark .section-header p { color: rgba(255,255,255,0.7); }
 
-    .primary-message {
-      font-size: 1.25rem;
-      font-weight: 500;
-      color: #143e54;
-      line-height: 1.5;
-      margin-bottom: 1rem;
-    }
+        .reveal {
+            opacity: 0; transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
 
-    .inquiry-message {
-      font-size: 1rem;
-      color: #2d5d77;
-      margin-top: 0.5rem;
-      font-weight: 430;
-      padding: 0 0.2rem;
-    }
+        /* NAV */
+        .nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            transition: var(--transition); padding: 0;
+        }
+        .nav.scrolled {
+            background: rgba(7, 19, 33, 0.92); backdrop-filter: blur(25px);
+            box-shadow: 0 4px 30px rgba(0,0,0,0.4);
+        }
+        .nav-inner {
+            display: flex; align-items: center; justify-content: space-between;
+            height: 80px; max-width: 1400px; margin: 0 auto; padding: 0 32px;
+        }
+        .nav-logo {
+            display: flex; align-items: center; gap: 10px;
+            font-size: 1.6rem; font-weight: 800; color: var(--white);
+            z-index: 1001; font-family: 'Playfair Display', serif;
+        }
+        .nav-logo .logo-icon {
+            width: 44px; height: 44px; background: var(--accent);
+            border-radius: var(--radius-sm); display: flex; align-items: center;
+            justify-content: center; font-size: 1.3rem; color: #0a0a0a;
+            font-weight: 900; box-shadow: 0 0 20px var(--accent-glow);
+        }
+        .nav-logo span { color: var(--accent); }
+        .nav-links { display: flex; align-items: center; gap: 4px; }
+        .nav-link {
+            padding: 8px 16px; color: rgba(255,255,255,0.85);
+            font-size: 0.9rem; font-weight: 500; border-radius: var(--radius-sm);
+            transition: var(--transition); cursor: pointer;
+        }
+        .nav-link:hover { color: var(--white); background: rgba(255,255,255,0.08); }
 
-    .provider-note {
-      margin-top: 1.8rem;
-      font-size: 0.9rem;
-      color: #6b8da3;
-      border-top: 1px dashed #b7ccdd;
-      padding-top: 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
+        .nav-dropdown { position: relative; }
+        .nav-dropdown .dropdown-trigger { display: flex; align-items: center; gap: 4px; }
+        .nav-dropdown .dropdown-trigger svg { width: 12px; height: 12px; transition: var(--transition); }
+        .nav-dropdown:hover .dropdown-trigger svg { transform: rotate(180deg); }
+        .nav-dropdown .dropdown-menu {
+            position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(10px);
+            background: rgba(255,255,255,0.95); backdrop-filter: blur(20px);
+            border-radius: var(--radius-md); box-shadow: var(--shadow-xl);
+            min-width: 240px; padding: 8px; opacity: 0; visibility: hidden;
+            transition: var(--transition); z-index: 1000; border: 1px solid rgba(255,255,255,0.8);
+        }
+        .nav-dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+        .dropdown-menu a {
+            display: flex; align-items: center; gap: 10px; padding: 10px 16px;
+            color: var(--gray-700); font-size: 0.9rem; font-weight: 500;
+            border-radius: var(--radius-sm); transition: var(--transition);
+        }
+        .dropdown-menu a:hover { background: var(--accent-light); color: var(--accent); }
 
-    .provider-note i {
-      opacity: 0.7;
-    }
+        .nav-actions { display: flex; align-items: center; gap: 16px; }
+        .nav-phone {
+            display: flex; align-items: center; gap: 8px; color: var(--white);
+            font-weight: 600; font-size: 1rem; font-family: 'Inter', sans-serif;
+        }
+        .nav-phone svg { width: 18px; height: 18px; color: var(--accent); }
+        .nav-phone:hover { color: var(--accent); }
+        .nav-cta {
+            background: var(--accent); color: #0a0a0a; padding: 10px 24px;
+            border-radius: 50px; font-weight: 700; font-size: 0.9rem;
+            transition: var(--transition); box-shadow: 0 0 15px var(--accent-glow);
+        }
+        .nav-cta:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 0 25px var(--accent-glow); }
 
-    .footer-meta {
-      margin-top: 0.8rem;
-      font-size: 0.75rem;
-      color: #7a9cb2;
-    }
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1001; padding: 8px; }
+        .hamburger span { display: block; width: 28px; height: 2px; background: var(--white); border-radius: 2px; transition: var(--transition); }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
-    /* responsive */
-    @media (max-width: 480px) {
-      .notice-card {
-        padding: 2rem 1.2rem;
-        border-radius: 2rem;
-      }
-      h1 {
-        font-size: 1.8rem;
-      }
-      .primary-message {
-        font-size: 1.1rem;
-      }
-    }
-  </style>
-  <!-- simple icon library for clean visuals -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        .mobile-menu {
+            display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background: var(--primary); z-index: 999; padding: 100px 32px 40px;
+            overflow-y: auto; transform: translateX(100%); transition: var(--transition-slow);
+        }
+        .mobile-menu.open { transform: translateX(0); }
+        .mobile-menu .mobile-link {
+            display: block; padding: 16px 0; color: var(--white); font-size: 1.3rem;
+            font-weight: 600; border-bottom: 1px solid rgba(255,255,255,0.1);
+            font-family: 'Playfair Display', serif;
+        }
+        .mobile-menu .mobile-sub { padding-left: 20px; }
+        .mobile-menu .mobile-sub a {
+            display: block; padding: 10px 0; color: rgba(255,255,255,0.7);
+            font-size: 1rem; font-family: 'Inter', sans-serif;
+        }
+        .mobile-menu .mobile-phone {
+            display: flex; align-items: center; gap: 10px; margin-top: 30px;
+            padding: 16px 0; color: var(--accent); font-size: 1.5rem; font-weight: 700;
+        }
+
+        /* HERO */
+        .hero {
+            position: relative; min-height: 100vh; display: flex; align-items: center;
+            overflow: hidden;
+        }
+        .hero-bg { position: absolute; inset: 0; z-index: 0; }
+        .hero-bg img { width: 100%; height: 100%; object-fit: cover; }
+        .hero-bg::after {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(135deg, rgba(7, 19, 33, 0.95) 0%, rgba(7, 19, 33, 0.7) 50%, rgba(7, 19, 33, 0.5) 100%);
+        }
+        .hero-content { position: relative; z-index: 2; width: 100%; padding-top: 100px; padding-bottom: 60px; }
+        .hero-grid {
+            display: grid; grid-template-columns: 1fr 460px; gap: 60px; align-items: center;
+            max-width: 1400px; margin: 0 auto; padding: 0 32px;
+        }
+        .hero-text { color: var(--white); }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(201,168,81,0.15); border: 1px solid rgba(201,168,81,0.4);
+            color: var(--accent); padding: 8px 20px; border-radius: 50px;
+            font-size: 0.85rem; font-weight: 600; margin-bottom: 24px;
+            letter-spacing: 0.05em; text-transform: uppercase;
+        }
+        .hero-badge svg { width: 16px; height: 16px; }
+        .hero-text h1 {
+            font-size: clamp(2.8rem, 5vw, 4.2rem); font-weight: 900;
+            line-height: 1.1; margin-bottom: 20px; text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        .hero-text h1 .accent { color: var(--accent); }
+        .hero-text p {
+            font-size: 1.25rem; color: rgba(255,255,255,0.8); margin-bottom: 36px;
+            max-width: 540px; line-height: 1.7;
+        }
+        .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+        .hero-stats {
+            display: flex; gap: 40px; margin-top: 50px; padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.15);
+        }
+        .hero-stat h3 { font-size: 2.5rem; font-weight: 800; color: var(--accent); }
+        .hero-stat p { font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-bottom: 0; text-transform: uppercase; letter-spacing: 0.05em; }
+
+        .hero-form-wrapper { position: relative; }
+        .hero-form {
+            background: rgba(255, 255, 255, 0.06); backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(40px); border: 1px solid rgba(255,255,255,0.2);
+            border-radius: var(--radius-xl); padding: 44px 36px; box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+        }
+        .hero-form h3 { color: var(--white); font-size: 1.5rem; margin-bottom: 6px; }
+        .hero-form .form-sub { color: rgba(255,255,255,0.6); font-size: 0.9rem; margin-bottom: 28px; }
+        .form-group { margin-bottom: 18px; }
+        .form-group label {
+            display: block; color: rgba(255,255,255,0.7); font-size: 0.8rem;
+            font-weight: 600; margin-bottom: 6px; text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%; padding: 12px 16px; background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius-sm);
+            color: var(--white); font-size: 0.95rem; outline: none; transition: var(--transition);
+        }
+        .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.35); }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: var(--accent); background: rgba(255,255,255,0.12);
+        }
+        .form-group select option { background: var(--primary); color: var(--white); }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .hero-form .btn { width: 100%; margin-top: 8px; padding: 16px; font-size: 1rem; }
+        .form-note { text-align: center; color: rgba(255,255,255,0.4); font-size: 0.75rem; margin-top: 12px; }
+
+        /* TRUST MARQUEE */
+        .trust-section { background: var(--gray-50); padding: 50px 0; overflow: hidden; border-bottom: 1px solid var(--gray-200); }
+        .trust-label { text-align: center; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gray-500); margin-bottom: 28px; }
+        .marquee-wrapper { overflow: hidden; position: relative; }
+        .marquee-wrapper::before, .marquee-wrapper::after {
+            content: ''; position: absolute; top: 0; bottom: 0; width: 120px; z-index: 2;
+        }
+        .marquee-wrapper::before { left: 0; background: linear-gradient(to right, var(--gray-50), transparent); }
+        .marquee-wrapper::after { right: 0; background: linear-gradient(to left, var(--gray-50), transparent); }
+        .marquee-track { display: flex; animation: marquee 35s linear infinite; width: max-content; }
+        .marquee-track:hover { animation-play-state: paused; }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .marquee-item {
+            display: flex; align-items: center; gap: 12px; padding: 14px 36px;
+            background: var(--white); border-radius: 50px; margin-right: 20px;
+            border: 1px solid var(--gray-200); white-space: nowrap; flex-shrink: 0;
+            box-shadow: var(--shadow-sm);
+        }
+        .marquee-icon {
+            width: 40px; height: 40px; background: var(--accent-light);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--accent);
+        }
+        .marquee-icon svg { width: 18px; height: 18px; }
+        .marquee-item span { font-weight: 600; font-size: 0.9rem; color: var(--gray-700); }
+
+        /* ABOUT */
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+        .about-image { position: relative; border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-lg); }
+        .about-image img { width: 100%; height: 520px; object-fit: cover; }
+        .about-image-badge {
+            position: absolute; bottom: 24px; left: 24px; background: var(--accent);
+            color: #0a0a0a; padding: 16px 24px; border-radius: var(--radius-md);
+            font-weight: 800; font-size: 1.2rem; box-shadow: var(--shadow-md);
+        }
+        .about-image-badge span { display: block; font-size: 0.75rem; font-weight: 600; opacity: 0.8; }
+        .about-content h2 { margin-bottom: 20px; color: var(--primary); }
+        .about-content .lead { font-size: 1.1rem; color: var(--gray-600); margin-bottom: 20px; line-height: 1.8; }
+        .about-features { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 30px 0; }
+        .about-feature { display: flex; align-items: center; gap: 10px; font-weight: 500; font-size: 0.95rem; }
+        .about-feature svg { width: 20px; height: 20px; color: var(--accent); flex-shrink: 0; }
+
+        /* SERVICES (no images, icons only) */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 28px; }
+        .service-card {
+            background: var(--white); border-radius: var(--radius-lg); overflow: hidden;
+            box-shadow: var(--shadow-sm); border: 1px solid var(--gray-200);
+            transition: var(--transition); padding: 28px; text-align: left;
+        }
+        .service-card:hover {
+            transform: translateY(-8px); box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+            border-color: var(--accent);
+        }
+        .service-icon-box {
+            width: 56px; height: 56px; background: var(--accent-light);
+            border-radius: var(--radius-sm); display: flex; align-items: center;
+            justify-content: center; margin-bottom: 20px; color: var(--accent);
+        }
+        .service-icon-box svg { width: 32px; height: 32px; stroke: var(--accent); }
+        .service-card h3 { margin-bottom: 10px; color: var(--primary); }
+        .service-card p { color: var(--gray-500); font-size: 0.95rem; margin-bottom: 20px; }
+        .service-card .btn { width: 100%; }
+
+        .services-cta { text-align: center; margin-top: 50px; }
+
+        /* PROJECTS */
+        .projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+        .project-card {
+            position: relative; border-radius: var(--radius-lg); overflow: hidden;
+            cursor: pointer; box-shadow: var(--shadow-md);
+        }
+        .project-card img { width: 100%; height: 380px; object-fit: cover; }
+        .project-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(7,19,33,0.9) 0%, transparent 60%);
+            display: flex; flex-direction: column; justify-content: flex-end;
+            padding: 32px; transition: var(--transition);
+        }
+        .project-card:hover .project-overlay { background: linear-gradient(to top, rgba(7,19,33,0.95) 0%, rgba(7,19,33,0.4) 60%); }
+        .project-overlay h3 { color: var(--white); margin-bottom: 6px; }
+        .project-overlay p { color: rgba(255,255,255,0.7); font-size: 0.9rem; }
+
+        .ba-slider {
+            position: relative; width: 100%; max-width: 900px; margin: 0 auto 50px;
+            border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg);
+            aspect-ratio: 16/9; cursor: col-resize;
+        }
+        .ba-slider img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
+        .ba-before { clip-path: inset(0 50% 0 0); z-index: 2; }
+        .ba-after { z-index: 1; }
+        .ba-handle {
+            position: absolute; top: 0; bottom: 0; left: 50%; width: 4px;
+            background: var(--accent); z-index: 3; transform: translateX(-50%); cursor: col-resize;
+        }
+        .ba-handle::before {
+            content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            width: 44px; height: 44px; background: var(--accent); border-radius: 50%;
+            box-shadow: 0 0 15px rgba(0,0,0,0.4);
+        }
+        .ba-handle::after {
+            content: '◀ ▶'; position: absolute; top: 50%; left: 50%;
+            transform: translate(-50%, -50%); color: #0a0a0a;
+            font-size: 11px; font-weight: 700; white-space: nowrap;
+        }
+        .ba-label {
+            position: absolute; top: 16px; padding: 6px 16px; border-radius: 50px;
+            font-size: 0.8rem; font-weight: 700; z-index: 4; text-transform: uppercase;
+        }
+        .ba-label-before { left: 16px; background: rgba(220,53,69,0.9); color: var(--white); }
+        .ba-label-after { right: 16px; background: rgba(40,167,69,0.9); color: var(--white); }
+
+        /* SERVICE AREAS */
+        .areas-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .areas-image { border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-lg); }
+        .areas-image img { width: 100%; height: 500px; object-fit: cover; }
+        .areas-list { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 24px 0 32px; }
+        .area-item {
+            display: flex; align-items: center; gap: 8px;
+            padding: 12px 18px; background: rgba(255,255,255,0.06);
+            border-radius: var(--radius-sm); border: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.85); font-weight: 500; font-size: 0.95rem;
+            transition: var(--transition);
+        }
+        .area-item:hover { background: rgba(201,168,81,0.15); border-color: var(--accent); color: var(--accent); }
+        .area-item svg { width: 16px; height: 16px; color: var(--accent); flex-shrink: 0; }
+
+        /* CONTACT */
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+        .contact-info h2 { margin-bottom: 16px; color: var(--primary); }
+        .contact-info .lead { color: var(--gray-500); font-size: 1.05rem; margin-bottom: 30px; }
+        .contact-details { margin-bottom: 30px; }
+        .contact-detail { display: flex; align-items: flex-start; gap: 18px; margin-bottom: 22px; }
+        .contact-detail-icon {
+            width: 50px; height: 50px; background: var(--accent-light);
+            border-radius: var(--radius-sm); display: flex; align-items: center;
+            justify-content: center; flex-shrink: 0;
+        }
+        .contact-detail-icon svg { width: 24px; height: 24px; color: var(--accent); }
+        .contact-social { display: flex; gap: 12px; }
+        .social-link {
+            width: 46px; height: 46px; background: var(--gray-100);
+            border-radius: 50%; display: flex; align-items: center;
+            justify-content: center; transition: var(--transition);
+        }
+        .social-link:hover { background: var(--accent); color: #0a0a0a; transform: translateY(-3px); }
+        .social-link svg { width: 20px; height: 20px; }
+
+        .contact-form-wrapper {
+            background: var(--white); border-radius: var(--radius-xl);
+            padding: 44px; box-shadow: var(--shadow-lg); border: 1px solid var(--gray-200);
+        }
+        .contact-form-wrapper h3 { margin-bottom: 6px; color: var(--primary); }
+        .contact-form-wrapper .form-sub { color: var(--gray-500); font-size: 0.9rem; margin-bottom: 24px; }
+
+        .contact-form .form-group label { color: var(--gray-700); }
+        .contact-form .form-group input, .contact-form .form-group select, .contact-form .form-group textarea {
+            background: var(--gray-50); border: 1px solid var(--gray-200); color: var(--gray-800);
+        }
+        .contact-form .form-group input::placeholder, .contact-form .form-group textarea::placeholder { color: var(--gray-300); }
+        .contact-form .form-group input:focus, .contact-form .form-group select:focus, .contact-form .form-group textarea:focus {
+            border-color: var(--accent); background: var(--white); box-shadow: 0 0 0 4px var(--accent-light);
+        }
+        .contact-map { margin-top: 60px; border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-md); }
+        .contact-map iframe { width: 100%; height: 350px; border: none; }
+
+        /* CTA BANNER */
+        .cta-banner {
+            background: linear-gradient(135deg, var(--primary) 0%, #0B1D35 100%);
+            padding: 100px 0; text-align: center; position: relative; overflow: hidden;
+        }
+        .cta-banner::before {
+            content: ''; position: absolute; top: -50%; right: -20%;
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(201,168,81,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .cta-banner h2 { color: var(--white); margin-bottom: 16px; }
+        .cta-banner p { color: rgba(255,255,255,0.7); font-size: 1.2rem; margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .cta-banner .btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+        /* FOOTER */
+        .footer { background: #040c16; color: rgba(255,255,255,0.6); padding: 80px 0 30px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 50px; }
+        .footer-brand .nav-logo { margin-bottom: 16px; }
+        .footer-brand p { font-size: 0.9rem; line-height: 1.7; max-width: 300px; }
+        .footer h4 { color: var(--white); font-size: 1rem; margin-bottom: 20px; font-weight: 700; font-family: 'Playfair Display', serif; }
+        .footer ul li { margin-bottom: 10px; }
+        .footer ul a { font-size: 0.9rem; color: rgba(255,255,255,0.5); transition: var(--transition); }
+        .footer ul a:hover { color: var(--accent); padding-left: 4px; }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px;
+            display: flex; justify-content: space-between; align-items: center;
+            font-size: 0.85rem; flex-wrap: wrap; gap: 16px;
+        }
+        .footer-bottom-links { display: flex; gap: 24px; }
+        .footer-bottom-links a:hover { color: var(--accent); }
+
+        .back-to-top {
+            position: fixed; bottom: 30px; right: 30px;
+            width: 50px; height: 50px; background: var(--accent); color: #0a0a0a;
+            border: none; border-radius: 50%; cursor: pointer; display: flex;
+            align-items: center; justify-content: center; z-index: 900;
+            opacity: 0; visibility: hidden; transform: translateY(20px);
+            transition: var(--transition); box-shadow: 0 4px 20px rgba(201,168,81,0.5);
+        }
+        .back-to-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+        .back-to-top:hover { background: var(--accent-hover); transform: translateY(-3px); }
+        .back-to-top svg { width: 22px; height: 22px; }
+
+        .floating-phone {
+            display: none; position: fixed; bottom: 30px; left: 30px;
+            background: var(--accent); width: 56px; height: 56px;
+            border-radius: 50%; box-shadow: 0 4px 25px rgba(201,168,81,0.6);
+            z-index: 999; align-items: center; justify-content: center;
+            color: #0a0a0a; font-size: 24px; transition: var(--transition);
+            text-decoration: none;
+        }
+        .floating-phone:hover { transform: scale(1.1); }
+
+        @media (max-width: 1024px) {
+            .hero-grid { grid-template-columns: 1fr; }
+            .hero-form-wrapper { max-width: 500px; margin: 0 auto; }
+            .hero-text { text-align: center; }
+            .hero-text p { margin-left: auto; margin-right: auto; }
+            .hero-ctas { justify-content: center; }
+            .hero-stats { justify-content: center; }
+            .about-grid { grid-template-columns: 1fr; gap: 40px; }
+            .areas-grid { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links, .nav-actions .nav-phone, .nav-actions .nav-cta { display: none; }
+            .hamburger { display: flex; }
+            .mobile-menu { display: block; }
+            .nav-inner { padding: 0 16px; }
+            .hero-content { padding-top: 80px; }
+            .hero-grid { padding: 0 16px; }
+            .hero-form { padding: 28px 20px; }
+            .form-row { grid-template-columns: 1fr; }
+            .hero-stats { gap: 24px; }
+            .services-grid { grid-template-columns: 1fr; }
+            .projects-grid { grid-template-columns: 1fr; }
+            .areas-list { grid-template-columns: 1fr; }
+            .about-features { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .section { padding: 80px 0; }
+            .container { padding: 0 16px; }
+            .ba-slider { aspect-ratio: 4/3; }
+            .contact-form-wrapper { padding: 28px; }
+            .floating-phone { display: flex; }
+        }
+    </style>
 </head>
 <body>
-  <div class="notice-card">
-    <div class="icon-circle">
-      <i class="fas fa-file-invoice"></i>
-    </div>
 
-    <h1>Website suspended</h1>
-    <div class="suspended-badge">
-      <i class="fas fa-ban" style="margin-right: 6px;"></i> 
-      pending account reconciliation
+<!-- Navigation -->
+<nav class="nav" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+        <a href="#home" class="nav-logo">
+            <div class="logo-icon">HL</div>
+            Hill <span>Land</span>
+        </a>
+        <div class="nav-links">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <div class="nav-dropdown">
+                <div class="nav-link dropdown-trigger">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div>
+                <div class="dropdown-menu">
+                    <a href="#services">🚚 Transportation & Logistics</a>
+                    <a href="#services">🚗 Vehicle Rental</a>
+                    <a href="#services">📦 General Trading</a>
+                    <a href="#services">🧹 Cleaning Services</a>
+                    <a href="#services">📋 Supply & Procurement</a>
+                    <a href="#services">📊 Cargo & Bulk Delivery</a>
+                    <a href="#services">🌍 Cross-Border Logistics</a>
+                </div>
+            </div>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#areas" class="nav-link">Service Areas</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+        <div class="nav-actions">
+            <a href="tel:+211917258560" class="nav-phone">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                0917 258 560
+            </a>
+            <a href="#contact" class="nav-cta">Get Free Quote</a>
+        </div>
+        <div class="hamburger" id="hamburger" aria-label="Toggle menu" tabindex="0">
+            <span></span><span></span><span></span>
+        </div>
     </div>
+</nav>
 
-    <div class="message-panel">
-      <div class="primary-message">
-        This website is temporarily suspended<br> pending account reconciliation.
-      </div>
-      <div class="inquiry-message">
-        For all project inquiries, please call the company directly via phone<br> or visit their office.
-      </div>
+<div class="mobile-menu" id="mobileMenu">
+    <a href="#home" class="mobile-link" onclick="closeMobile()">Home</a>
+    <a href="#about" class="mobile-link" onclick="closeMobile()">About</a>
+    <div class="mobile-link" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'?'block':'none'">Services ▾</div>
+    <div class="mobile-sub" style="display:none">
+        <a href="#services" onclick="closeMobile()">Transportation & Logistics</a>
+        <a href="#services" onclick="closeMobile()">Vehicle Rental</a>
+        <a href="#services" onclick="closeMobile()">General Trading</a>
+        <a href="#services" onclick="closeMobile()">Cleaning Services</a>
+        <a href="#services" onclick="closeMobile()">Supply & Procurement</a>
+        <a href="#services" onclick="closeMobile()">Cargo & Bulk Delivery</a>
+        <a href="#services" onclick="closeMobile()">Cross-Border Logistics</a>
     </div>
+    <a href="#projects" class="mobile-link" onclick="closeMobile()">Projects</a>
+    <a href="#areas" class="mobile-link" onclick="closeMobile()">Service Areas</a>
+    <a href="#contact" class="mobile-link" onclick="closeMobile()">Contact</a>
+    <a href="tel:+211917258560" class="mobile-phone">📞 0917 258 560</a>
+    <a href="#contact" class="btn btn-primary btn-lg" style="margin-top:20px;text-align:center; display:block;" onclick="closeMobile()">Get Free Quote</a>
+</div>
 
-    <!-- automated message from provider (no contact details) -->
-    <div class="provider-note">
-      <i class="fas fa-robot"></i>
-      <span>This is an automated message from the web services provider.</span>
+<!-- Hero -->
+<section class="hero" id="home">
+    <div class="hero-bg">
+        <img src="assets/hill1.jpg" alt="Truck on road in South Sudan" loading="eager" width="1920" height="1080">
     </div>
-
-    <!-- subtle footer with dynamic year (JS usage) -->
-    <div class="footer-meta">
-      <i class="far fa-calendar-alt" style="margin-right: 4px;"></i>
-      <span>Notice ID · WS-<span id="yearDisplay"></span></span>
+    <div class="hero-content">
+        <div class="hero-grid">
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    South Sudan's Reliable Trading Partner
+                </div>
+                <h1>Deliver <span class="accent">Trusted Logistics</span> & Trading Solutions Across East Africa</h1>
+                <p>Hill Land General Trading Co. Ltd provides transportation, vehicle rental, cleaning, supply, and cross‑border logistics — committed to timely, professional service in Juba and beyond.</p>
+                <div class="hero-ctas">
+                    <a href="tel:+211917258560" class="btn btn-primary btn-lg">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                        Call: 0917 258 560
+                    </a>
+                    <a href="#contact" class="btn btn-outline btn-lg">Get Free Quote</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat"><h3>500+</h3><p>Projects Completed</p></div>
+                    <div class="hero-stat"><h3>15+</h3><p>Years Combined Experience</p></div>
+                    <div class="hero-stat"><h3>100%</h3><p>Client Satisfaction</p></div>
+                </div>
+            </div>
+            <div class="hero-form-wrapper reveal">
+                <div class="hero-form">
+                    <h3>Request a Quote</h3>
+                    <p class="form-sub">Response within 24 hours • No obligation</p>
+                    <form id="heroForm" onsubmit="handleHeroForm(event)">
+                        <div class="form-group"><label>Full Name</label><input type="text" placeholder="John Mabil" required></div>
+                        <div class="form-row">
+                            <div class="form-group"><label>Phone</label><input type="tel" placeholder="+211 900 000 000" required></div>
+                            <div class="form-group"><label>Email</label><input type="email" placeholder="email@example.com"></div>
+                        </div>
+                        <div class="form-group"><label>Service Needed</label>
+                            <select>
+                                <option value="">Select service...</option>
+                                <option value="transport">Transportation & Logistics</option>
+                                <option value="rental">Vehicle Rental</option>
+                                <option value="trading">General Trading</option>
+                                <option value="cleaning">Cleaning Services</option>
+                                <option value="supply">Supply & Procurement</option>
+                                <option value="cargo">Cargo & Bulk Delivery</option>
+                                <option value="crossborder">Cross-Border Logistics</option>
+                            </select>
+                        </div>
+                        <div class="form-group"><label>Location</label><input type="text" placeholder="City, South Sudan"></div>
+                        <button type="submit" class="btn btn-primary btn-lg">Get My Quote →</button>
+                        <p class="form-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg> Your information is secure.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
+</section>
 
-  <!-- minimal JavaScript – sets year and confirms active -->
-  <script>
-    (function() {
-      // Set the current year in the footer (dynamic, JS usage)
-      const yearSpan = document.getElementById('yearDisplay');
-      if (yearSpan) {
-        yearSpan.textContent = new Date().getFullYear();
-      }
-      
-      // Optional console message (shows JS is running)
-      console.log('⚙️ Automated suspension notice — account reconciliation pending.');
-    })();
-  </script>
-
-  <!-- fallback for no-JS -->
-  <noscript>
-    <div style="margin-top:1rem; color:#b33; background:#ffe6e6; padding:8px; border-radius:20px;">
-      ⚠️ JavaScript disabled — notice remains valid.
+<!-- Trust Marquee -->
+<section class="trust-section" aria-label="Trust indicators">
+    <p class="trust-label">Trusted Across South Sudan — Licensed, Insured & Professional</p>
+    <div class="marquee-wrapper">
+        <div class="marquee-track" id="marqueeTrack">
+            <div class="marquee-item"><div class="marquee-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><span>Licensed & Insured</span></div>
+            <div class="marquee-item"><div class="marquee-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><span>Years of Service</span></div>
+            <div class="marquee-item"><div class="marquee-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 00-3-3l-4 9v11h11.28a2 2 0 002-1.7l1.38-9a2 2 0 00-2-2.3zM7 22H4a2 2 0 01-2-2v-7a2 2 0 012-2h3"/></svg></div><span>Client Approved</span></div>
+            <div class="marquee-item"><div class="marquee-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><span>Reliable Fleet</span></div>
+            <div class="marquee-item"><div class="marquee-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div><span>Experienced Team</span></div>
+            <!-- Duplicate items for infinite loop -->
+            <div class="marquee-item"><div class="marquee-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><span>Licensed & Insured</span></div>
+            <div class="marquee-item"><div class="marquee-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><span>Years of Service</span></div>
+            <div class="marquee-item"><div class="marquee-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 00-3-3l-4 9v11h11.28a2 2 0 002-1.7l1.38-9a2 2 0 00-2-2.3zM7 22H4a2 2 0 01-2-2v-7a2 2 0 012-2h3"/></svg></div><span>Client Approved</span></div>
+            <div class="marquee-item"><div class="marquee-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><span>Reliable Fleet</span></div>
+            <div class="marquee-item"><div class="marquee-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div><span>Experienced Team</span></div>
+        </div>
     </div>
-  </noscript>
+</section>
+
+<!-- About -->
+<section class="section" id="about" aria-labelledby="about-heading">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-image reveal">
+                <img src="assets/hill1.jpg" alt="Hill Land team meeting in Juba" loading="lazy">
+                <div class="about-image-badge">Proven Track Record<span>In South Sudan</span></div>
+            </div>
+            <div class="about-content reveal reveal-delay-2">
+                <h2 id="about-heading">Your Trusted Partner for Reliable Trading & Logistics</h2>
+                <p class="lead">Hill Land General Trading Co. Ltd is a dynamic South Sudanese company based in Juba, dedicated to providing efficient, cost‑effective business solutions across South Sudan and the East African Community.</p>
+                <p class="lead">We support businesses, organizations, and individuals through dependable transportation, logistics, cleaning, equipment rental, and general supply services. Our commitment to integrity, timely delivery, and customer satisfaction sets us apart.</p>
+                <div class="about-features">
+                    <div class="about-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Licensed & Fully Insured</div>
+                    <div class="about-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Professional Fleet & Equipment</div>
+                    <div class="about-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Cross‑Border Expertise</div>
+                    <div class="about-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Customer‑Centric Approach</div>
+                    <div class="about-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Affordable & Transparent Pricing</div>
+                    <div class="about-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 24/7 Support</div>
+                </div>
+                <a href="#contact" class="btn btn-primary btn-lg">Request a Quote →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services -->
+<section class="section section-light" id="services" aria-labelledby="services-heading">
+    <div class="container">
+        <div class="section-header reveal">
+            <h2 id="services-heading">Our Comprehensive Services</h2>
+            <p>End‑to‑end solutions for trading, logistics, and facility management across South Sudan and East Africa.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card reveal reveal-delay-1">
+                <div class="service-icon-box"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg></div>
+                <h3>Transportation & Logistics</h3>
+                <p>Reliable movement of goods, bulk products, and cargo across South Sudan and neighboring countries. Timely, secure, and efficient.</p>
+                <a href="#contact" class="btn btn-accent-outline btn-sm">Get Quote →</a>
+            </div>
+            <div class="service-card reveal reveal-delay-2">
+                <div class="service-icon-box"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zm10 0a2 2 0 11-4 0 2 2 0 014 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l4 4m-4-4v6a2 2 0 01-2 2H5m8-8h4l2 2v3m0 4H3"/></svg></div>
+                <h3>Vehicle Rental Services</h3>
+                <p>Dependable short‑ and long‑term vehicle rental for organizations, projects, and individuals. Well‑maintained fleet available.</p>
+                <a href="#contact" class="btn btn-accent-outline btn-sm">Get Quote →</a>
+            </div>
+            <div class="service-card reveal reveal-delay-3">
+                <div class="service-icon-box"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z"/></svg></div>
+                <h3>General Trading</h3>
+                <p>Wide range of products and commodities to meet commercial, industrial, and organizational needs. Competitive pricing and reliable supply.</p>
+                <a href="#contact" class="btn btn-accent-outline btn-sm">Get Quote →</a>
+            </div>
+            <div class="service-card reveal reveal-delay-4">
+                <div class="service-icon-box"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg></div>
+                <h3>Professional Cleaning Services</h3>
+                <p>Residential, commercial, and industrial cleaning — from offices to warehouses — maintaining safe and hygienic environments.</p>
+                <a href="#contact" class="btn btn-accent-outline btn-sm">Get Quote →</a>
+            </div>
+            <div class="service-card reveal reveal-delay-1">
+                <div class="service-icon-box"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+                <h3>Supply & Procurement</h3>
+                <p>Timely procurement and delivery of goods for businesses, institutions, and projects. We handle the full supply chain.</p>
+                <a href="#contact" class="btn btn-accent-outline btn-sm">Get Quote →</a>
+            </div>
+            <div class="service-card reveal reveal-delay-2">
+                <div class="service-icon-box"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"/></svg></div>
+                <h3>Cargo & Bulk Product Delivery</h3>
+                <p>Secure handling and transport of bulk goods and cargo — we manage your heavy‑duty logistics with care.</p>
+                <a href="#contact" class="btn btn-accent-outline btn-sm">Get Quote →</a>
+            </div>
+            <div class="service-card reveal reveal-delay-3">
+                <div class="service-icon-box"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+                <h3>Cross‑Border Logistics</h3>
+                <p>Seamless movement of goods across South Sudan's borders into Uganda, Kenya, Ethiopia, and the wider EAC region.</p>
+                <a href="#contact" class="btn btn-accent-outline btn-sm">Get Quote →</a>
+            </div>
+        </div>
+        <div class="services-cta reveal">
+            <p style="font-size:1.1rem;color:var(--gray-500);margin-bottom:16px;">Need a customised logistics plan? We'll design it with you.</p>
+            <a href="tel:+211917258560" class="btn btn-dark btn-lg">Call Now: 0917 258 560</a>
+        </div>
+    </div>
+</section>
+
+<!-- Projects -->
+<section class="section" id="projects" aria-labelledby="projects-heading">
+    <div class="container">
+        <div class="section-header reveal">
+            <h2 id="projects-heading">Our Operational Excellence</h2>
+            <p>Real‑world results from our logistics, supply, and cargo operations across South Sudan and East Africa.</p>
+        </div>
+        <div class="ba-slider reveal" id="baSlider">
+            <img class="ba-after" src="assets/hill22.jpg" alt="After - Organized logistics" loading="lazy">
+            <img class="ba-before" id="baBefore" src="assets/hill2.jpg" alt="Before - Disorganized storage" loading="lazy">
+            <div class="ba-handle" id="baHandle"></div>
+            <span class="ba-label ba-label-before">Before Partnership</span>
+            <span class="ba-label ba-label-after">With Hill Land</span>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card reveal"><img src="assets/hill1.jpg" alt="Cross‑border cargo" loading="lazy"><div class="project-overlay"><h3>Cross‑Border Cargo Delivery</h3><p>Juba → Kampala — 40‑ton shipment</p></div></div>
+            <div class="project-card reveal reveal-delay-1"><img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Warehouse supply" loading="lazy"><div class="project-overlay"><h3>Warehouse Supply Operation</h3><p>Nimule — bulk commodities</p></div></div>
+            <div class="project-card reveal reveal-delay-2"><img src="assets/hill22.jpg" alt="Fleet deployment" loading="lazy"><div class="project-overlay"><h3>Fleet Deployment for NGO</h3><p>Juba — 15 vehicles leased</p></div></div>
+            <div class="project-card reveal reveal-delay-3"><img src="assets/hill222.jpg" alt="Cleaning contract" loading="lazy"><div class="project-overlay"><h3>Industrial Cleaning Contract</h3><p>Multiple sites in Juba</p></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- Service Areas -->
+<section class="section section-dark" id="areas" aria-labelledby="areas-heading">
+    <div class="container">
+        <div class="areas-grid">
+            <div class="reveal">
+                <h2 id="areas-heading">Serving South Sudan & East African Community</h2>
+                <p style="color:rgba(255,255,255,0.7);font-size:1.05rem;margin-top:16px;margin-bottom:8px;line-height:1.7;">Hill Land General Trading operates across South Sudan, with established links into Uganda, Kenya, Ethiopia, and the wider East African region.</p>
+                <div class="areas-list">
+                    <div class="area-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Juba</div>
+                    <div class="area-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Nimule</div>
+                    <div class="area-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Wau</div>
+                    <div class="area-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Malakal</div>
+                    <div class="area-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Uganda</div>
+                    <div class="area-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Kenya</div>
+                    <div class="area-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Ethiopia</div>
+                    <div class="area-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> EAC Region</div>
+                </div>
+                <a href="#contact" class="btn btn-primary btn-lg">Contact Us Today →</a>
+            </div>
+            <div class="areas-image reveal reveal-delay-2">
+                <img src="assets/hill1.jpg" alt="African landscape representing service area" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Banner -->
+<section class="cta-banner" aria-label="Call to action">
+    <div class="container reveal">
+        <h2>Ready to Move Your Business Forward?</h2>
+        <p>Partner with Hill Land General Trading for reliable logistics, trading, and professional services across South Sudan.</p>
+        <div class="btns">
+            <a href="tel:+211917258560" class="btn btn-primary btn-lg">Call: 0917 258 560</a>
+            <a href="#contact" class="btn btn-outline btn-lg">Request a Quote</a>
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section class="section" id="contact" aria-labelledby="contact-heading">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-info reveal">
+                <h2 id="contact-heading">Get In Touch</h2>
+                <p class="lead">We're ready to serve you. Contact us today for a free consultation or quote.</p>
+                <div class="contact-details">
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+                        <div><h4>Headquarters</h4><p>Airport Road, Near American Residence<br>Juba, South Sudan</p></div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+                        <div><h4>Phone</h4><p><a href="tel:+211917258560">0917 258 560</a></p></div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+                        <div><h4>Email</h4><p><a href="mailto:hill2land2022@gmail.com">hill2land2022@gmail.com</a></p></div>
+                    </div>
+                </div>
+                <div class="contact-social">
+                    <a href="https://www.facebook.com/HillLandGeneralTrading" class="social-link" aria-label="Facebook">📘</a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">🔗</a>
+                    <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                </div>
+            </div>
+            <div class="contact-form-wrapper reveal reveal-delay-2">
+                <h3>Send a Message</h3>
+                <p class="form-sub">We'll respond within 24 hours.</p>
+                <form class="contact-form" id="contactForm" onsubmit="handleContactForm(event)">
+                    <div class="form-row">
+                        <div class="form-group"><label>Full Name *</label><input type="text" placeholder="Your name" required></div>
+                        <div class="form-group"><label>Phone *</label><input type="tel" placeholder="+211 9XX XXXX" required></div>
+                    </div>
+                    <div class="form-group"><label>Email</label><input type="email" placeholder="email@example.com"></div>
+                    <div class="form-group"><label>Service Needed *</label>
+                        <select required>
+                            <option value="">Select service...</option>
+                            <option>Transportation & Logistics</option>
+                            <option>Vehicle Rental</option>
+                            <option>General Trading</option>
+                            <option>Cleaning Services</option>
+                            <option>Supply & Procurement</option>
+                            <option>Cargo & Bulk Delivery</option>
+                            <option>Cross‑Border Logistics</option>
+                        </select>
+                    </div>
+                    <div class="form-group"><label>Location</label><input type="text" placeholder="City, Country"></div>
+                    <div class="form-group"><label>Message</label><textarea rows="4" placeholder="Tell us about your requirements..."></textarea></div>
+                    <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">Submit Request →</button>
+                    <p style="text-align:center;font-size:0.75rem;color:var(--gray-500);margin-top:12px;">Your details are safe and never shared.</p>
+                </form>
+            </div>
+        </div>
+        <div class="contact-map reveal">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127091.363636721!2d31.510015!3d4.859363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177389201e5cdbb1%3A0x40a439c0f9c5e6b!2sJuba%2C%20South%20Sudan!5e0!3m2!1sen!2s!4v1700000000000" allowfullscreen="" loading="lazy" title="Hill Land General Trading office location"></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer" role="contentinfo">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#home" class="nav-logo"><div class="logo-icon">HL</div>Hill <span>Land</span></a>
+                <p>Delivering reliable trading, transportation, and business solutions across South Sudan and the East African Community.</p>
+            </div>
+            <div>
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#services">Transportation & Logistics</a></li>
+                    <li><a href="#services">Vehicle Rental</a></li>
+                    <li><a href="#services">General Trading</a></li>
+                    <li><a href="#services">Cleaning Services</a></li>
+                    <li><a href="#services">Supply & Procurement</a></li>
+                    <li><a href="#services">Cargo & Bulk Delivery</a></li>
+                    <li><a href="#services">Cross‑Border Logistics</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Service Areas</h4>
+                <ul>
+                    <li><a href="#areas">Juba</a></li><li><a href="#areas">Nimule</a></li><li><a href="#areas">Wau</a></li>
+                    <li><a href="#areas">Uganda</a></li><li><a href="#areas">Kenya</a></li><li><a href="#areas">Ethiopia</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#projects">Our Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="mailto:hill2land2022@gmail.com">Email</a></li>
+                    <li><a href="tel:+211917258560">Call Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Hill Land General Trading Co. Ltd. All rights reserved.</p>
+            <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Sitemap</a></div>
+        </div>
+    </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+<a href="tel:+211917258560" class="floating-phone" aria-label="Call us">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+</a>
+
+<script>
+    const navbar = document.getElementById('navbar');
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const backToTop = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 50);
+        backToTop.classList.toggle('visible', window.scrollY > 500);
+    });
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        mobileMenu.classList.toggle('open');
+        document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+    });
+
+    function closeMobile() {
+        hamburger.classList.remove('active');
+        mobileMenu.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+
+    // Reveal
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // Before/After slider
+    const baSlider = document.getElementById('baSlider');
+    const baBefore = document.getElementById('baBefore');
+    const baHandle = document.getElementById('baHandle');
+    let isDragging = false;
+    function updateSlider(x) {
+        const rect = baSlider.getBoundingClientRect();
+        let percent = ((x - rect.left) / rect.width) * 100;
+        percent = Math.max(5, Math.min(95, percent));
+        baBefore.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
+        baHandle.style.left = percent + '%';
+    }
+    baSlider.addEventListener('mousedown', (e) => { isDragging = true; updateSlider(e.clientX); });
+    window.addEventListener('mousemove', (e) => { if (isDragging) updateSlider(e.clientX); });
+    window.addEventListener('mouseup', () => { isDragging = false; });
+    baSlider.addEventListener('touchstart', (e) => { isDragging = true; updateSlider(e.touches[0].clientX); }, { passive: true });
+    baSlider.addEventListener('touchmove', (e) => { if (isDragging) updateSlider(e.touches[0].clientX); }, { passive: true });
+    baSlider.addEventListener('touchend', () => { isDragging = false; });
+
+    // Form handlers
+    function handleHeroForm(e) {
+        e.preventDefault();
+        const btn = e.target.querySelector('button[type="submit"]');
+        btn.textContent = '✓ Request Sent!'; btn.style.background = '#28a745'; btn.style.color = '#fff';
+        setTimeout(() => { btn.textContent = 'Get My Quote →'; btn.style.background = ''; btn.style.color = ''; e.target.reset(); }, 3000);
+    }
+    function handleContactForm(e) {
+        e.preventDefault();
+        const btn = e.target.querySelector('button[type="submit"]');
+        btn.textContent = '✓ Submitted!'; btn.style.background = '#28a745'; btn.style.color = '#fff';
+        setTimeout(() => { btn.textContent = 'Submit Request →'; btn.style.background = ''; btn.style.color = ''; e.target.reset(); }, 3000);
+    }
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                const top = target.getBoundingClientRect().top + window.pageYOffset - 80;
+                window.scrollTo({ top, behavior: 'smooth' });
+            }
+        });
+    });
+
+    // Counter animation
+    const heroStats = document.querySelector('.hero-stats');
+    if (heroStats) {
+        const counterObserver = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                document.querySelectorAll('.hero-stat h3').forEach(counter => {
+                    const text = counter.textContent;
+                    const match = text.match(/[\d,.]+/);
+                    if (!match) return;
+                    const target = parseFloat(match[0].replace(/,/g, ''));
+                    const suffix = text.replace(match[0], '').trim();
+                    const prefix = text.indexOf(match[0]) > 0 ? text.substring(0, text.indexOf(match[0])) : '';
+                    let start = null;
+                    function step(timestamp) {
+                        if (!start) start = timestamp;
+                        const progress = Math.min((timestamp - start) / 2000, 1);
+                        const eased = 1 - Math.pow(1 - progress, 3);
+                        counter.textContent = prefix + (target >= 1000 ? Math.floor(target * eased).toLocaleString() : Math.floor(target * eased)) + suffix;
+                        if (progress < 1) requestAnimationFrame(step);
+                        else counter.textContent = text;
+                    }
+                    requestAnimationFrame(step);
+                });
+                counterObserver.unobserve(heroStats);
+            }
+        }, { threshold: 0.5 });
+        counterObserver.observe(heroStats);
+    }
+</script>
 </body>
 </html>
